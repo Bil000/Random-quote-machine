@@ -45,22 +45,12 @@ const barChart = (information) => {
 
       })
       .on("mouseleave", () => {toolTip.style("display", "none")})     
-} 
-
-const additionalInformation = (information) => {
-   const {description} = information
 }
 
 const scales = () => {
    const xScale = d3.scaleLinear().domain([1947, 2015]).range([0, w - 51.5]);
    const yScale = d3.scaleLinear().domain([0, 18000]).range([h - 17, 0]);
-   const xAxis = d3.axisBottom(xScale).ticks(14).tickFormat(function (d) {
-      // Remove commas from thousands place and keep the decimal part
-      const formattedValue = d.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-      // If the formatted value has a decimal part, remove trailing zeroes and the decimal point if it's followed by only zeroes
-      formattedValue.replace(/\.0+$|(\.\d*?)0+$/, '$1');
-      return formattedValue;
-   });
+   const xAxis = d3.axisBottom(xScale).ticks(14);
    const yAxis = d3.axisLeft(yScale).ticks(10); 
 
    svg.append("g")
