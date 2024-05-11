@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+    background-color: rgb(33, 33, 33);
+    font-family: sans-serif;
+}
+
+main {
+    text-align: center;
+    width: 1000px;
+    height: 500px;
+    background-color: aliceblue;
+    padding: 20px;
+    box-shadow: 2px 3px 2px 2px rgb(87, 87, 87);
+}
+div {
+    width: 100%;
+}
+
+.bar:hover {
+   fill: aliceblue;
+}
+
+.chart {
+    width: 140px;
+    padding: 15px;
+    opacity: 0.8;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(119, 158, 167);
+    display: none;
+    position: absolute; 
+    box-shadow: 1px 2px 2px 1px black;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    font-size: 12px;
+    padding: 12px;
+}
